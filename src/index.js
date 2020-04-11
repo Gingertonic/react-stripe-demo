@@ -4,9 +4,16 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+import { loadStripe } from '@stripe/stripe-js'
+import { Elements } from '@stripe/react-stripe-js'
+
+const stripe = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY)
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Elements stripe={stripe} >
+      <App />
+    </Elements >
   </React.StrictMode>,
   document.getElementById('root')
 );

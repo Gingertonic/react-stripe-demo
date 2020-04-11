@@ -1,5 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Paaji+2|Love+Ya+Like+A+Sister|Special+Elite&display=swap');
+/* font-family: 'Love Ya Like A Sister', cursive;
+font-family: 'Special Elite', cursive;
+font-family: 'Baloo Paaji 2', cursive; */
+
 .App {
   text-align: center;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr 4fr 1fr;
+  font-family: 'Special Elite', cursive; 
+  color: rgba(0,25,0,0.9);
 }
 
 .App-logo {
@@ -13,19 +23,31 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+header, footer {
+  display: grid;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 3em;
+  /* background-color: aliceblue; */
+  background-color: rgba(186, 204, 129, 0.3);
 }
 
-.App-link {
-  color: #61dafb;
+#main {
+  /* background-color: #282c34; */
+  /* grid-template-columns: 3fr 2fr 3fr; */
+  /* align-items: center; */
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  /* color: white; */
+  color: #282c34;
+}
+
+.no-grid {
+  display: block;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: 3fr 2fr 3fr;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +57,149 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.charity-div {
+  /* border: 2px solid blue; */
+  padding-top: 3vh;
+}
+
+.charity-logo {
+  height: 70%;
+  max-width: 100%;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  display: block;
+  padding: 1em;
+  border-radius: 5px;
+  font-size: inherit;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+#to-payment {
+  height: 100%;
+  font-size: larger;
+  background-color:rgba(0,0,0,0);
+}
+
+.text-change-hover:hover {
+  text-shadow: 2px 2px red;
+}
+
+.centre-section {
+  /* border: 2px solid gold; */
+  display: grid;
+  align-content: center;
+  min-width: 15vw;
+  position: relative;
+}
+
+#donation-tracker {
+  grid-template-columns: 1fr 1fr;
+}
+
+#payment-modal {
+  grid-template-columns: 1fr;
+  /* background-color: rgba(0,0,200,0.1); */
+  border-bottom-left-radius: 20%;
+  box-shadow: 0 0 5px 5px rgba(186, 204, 129, 1);
+  background-color: rgba(186, 204, 129, 0.1);
+}
+
+.don-amount {
+  font-size: 3em;
+  padding: 0.5em 0;
+  display: grid;
+  align-content: center;
+}
+
+.increment {
+  font-size: larger;
+  border: none;
+}
+
+.don-unit {
+  display: grid;
+  grid-template-rows: 1fr 3fr 1fr;
+  margin: 0.25em;
+  min-width: 10vw;
+}
+
+.currency {
+  position: relative;
+  max-width: 150px;
+  /* top: 50%; */
+  left: 35%;
+  /* transform: translate(-50%, -50%); */
+}
+
+.currency::before {
+  content: '£';
+  font-size: 0.5em;
+  position: absolute;
+  bottom: 50%;
+  left: -30px;
+}
+
+#close-modal {
+  width: 5vh;
+  height: 5vh;
+  font-size: larger;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.75em 1.25em;
+  background-color: rgba(0,0,0,0);
+}
+
+input, input:-webkit-autofill, .fake-input {
+  width: 80%;
+  padding: 1em;
+  border-radius: 5px;
+  border: none;
+  /* background-color: aliceblue; */
+  background-color: rgba(186, 204, 129, 0.5);
+  font-family: inherit;
+  font-size: large;
+  margin: 0.5em;
+  color: rgba(0,25,0,0.7);
+  /* color: white; */
+  font-weight: bolder;
+}
+
+
+.fake-input {
+  font-family: 'Special Elite', cursive;
+}
+
+#billing-details {
+  display: grid;
+  justify-content: center;
+}
+
+#alert-banner {
+  width: 100%;
+  background-color: darkred;
+  color: white;
+  position: absolute;
+  top: 0;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  opacity: 0.9;
+}
+
+.gift-aid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  font-size: small;
 }
